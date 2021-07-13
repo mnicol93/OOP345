@@ -26,10 +26,10 @@ namespace sdds {
         if (str[next_pos] == m_delimiter)
             throw("Delimiter found at new position.");
         std::string temp = str;
-        temp = str.substr(next_pos, str.find_first_of(m_delimiter));
-
+        //temp = str.substr(next_pos, str.find_first_of(m_delimiter));
+        temp = temp.substr(next_pos, str.find_first_of(m_delimiter));
         if (str != "") {
-            next_pos = str.find_first_of(m_delimiter);
+            next_pos += str.find_first_of(m_delimiter, next_pos) + 1;
             more = true;
         }
         else {

@@ -18,7 +18,7 @@ namespace sdds {
 
 	Station::Station(const std::string& str)
 	{
-		unsigned int nPos{ 0u };
+		size_t nPos{ 0u };
 		bool more{ false };
 		Utilities util;
 		
